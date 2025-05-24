@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  output: 'export', // Enables static exports
+  // Optional: Add other TypeScript-typed config options here
+  images: {
+    unoptimized: true, // Recommended for static exports
+  },
+  // Other configuration options...
+}
 
-export default nextConfig;
+export default nextConfig
