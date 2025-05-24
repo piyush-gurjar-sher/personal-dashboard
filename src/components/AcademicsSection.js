@@ -17,8 +17,9 @@ export default function AcademicsSection({ data }) {
           </div>
         </div>
         
-        <div>
-          <h3 className="text-2xl font-bold mb-4">Experience</h3>
+       <div>
+        <h3 className="text-2xl font-bold mb-4">Experience</h3>
+        {data.experience && data.experience.length > 0 ? (
           <div className="space-y-6">
             {data.experience.map(item => (
               <div key={item.id} className="bg-gray-50 p-6 rounded-lg shadow">
@@ -28,7 +29,10 @@ export default function AcademicsSection({ data }) {
               </div>
             ))}
           </div>
-        </div>
+        ) : (
+          <p className="text-gray-500">No experience to show</p>
+        )}
+      </div>
       </div>
     </section>
   );
